@@ -1,0 +1,162 @@
+
+/* DISEÑO GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff5fc;
+    color: #51405e;
+}
+
+/* ENCABEZADO */
+header {
+    background: linear-gradient(120deg, #c69bea, #f4b6d9);
+    text-align: center;
+    padding: 30px 15px;
+    color: white;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+nav {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    color: #663c7b;
+    text-decoration: none;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #fce0f0;
+    transform: translateY(-3px);
+}
+
+/* BIENVENIDA */
+.bienvenida {
+    text-align: center;
+    padding: 85px 20px;
+    background: linear-gradient(135deg, #f9dff0, #e9dcff);
+}
+
+.bienvenida h2 {
+    font-size: 32px;
+    color: #8656a8;
+    margin: 20px 0;
+}
+
+.bienvenida h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.bienvenida p {
+    max-width: 550px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+.decoracion {
+    font-size: 28px;
+}
+
+/* BOTÓN */
+.boton {
+    display: inline-block;
+    background: #a879ce;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #8855b0;
+    transform: scale(1.05);
+}
+
+/* SECCIONES */
+section {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #9867b9;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* TARJETAS */
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 750px;
+    margin: 15px auto;
+    box-shadow: 0 5px 18px #d9c6e5;
+    line-height: 1.8;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+/* CONTENEDORES */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contenedor .tarjeta {
+    flex: 1 1 250px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background: #b48bd0;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    line-height: 1.8;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .bienvenida h2 {
+        font-size: 25px;
+    }
+}
