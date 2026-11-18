@@ -1,5 +1,7 @@
 
-/* DISEÑO GENERAL */
+/* ===== ESTILO GENERAL ===== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,155 +10,200 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #fff5fc;
-    color: #51405e;
+    font-family: 'DM Sans', sans-serif;
+    background: #faf9fc;
+    color: #292337;
+    line-height: 1.7;
 }
 
-/* ENCABEZADO */
+/* ===== ENCABEZADO ===== */
 header {
-    background: linear-gradient(120deg, #c69bea, #f4b6d9);
-    text-align: center;
-    padding: 30px 15px;
-    color: white;
+    background: rgba(255,255,255,0.96);
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    border-bottom: 1px solid #eee9f4;
 }
 
 header h1 {
-    font-size: 38px;
-    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+    color: #7043a1;
+    font-size: 27px;
+}
+
+header p {
+    display: none;
 }
 
 nav {
-    margin-top: 22px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 25px;
 }
 
 nav a {
-    color: #663c7b;
     text-decoration: none;
-    background: white;
-    padding: 10px 15px;
-    border-radius: 20px;
-    font-weight: bold;
+    color: #62596e;
+    font-size: 14px;
+    font-weight: 600;
     transition: 0.3s;
 }
 
 nav a:hover {
-    background: #fce0f0;
-    transform: translateY(-3px);
+    color: #9564c5;
 }
 
-/* BIENVENIDA */
+/* ===== BIENVENIDA ===== */
 .bienvenida {
-    text-align: center;
-    padding: 85px 20px;
-    background: linear-gradient(135deg, #f9dff0, #e9dcff);
+    min-height: 480px;
+    padding: 110px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    background:
+        radial-gradient(circle at 85% 25%, #e9ddfa, transparent 30%),
+        linear-gradient(120deg, #faf8ff, #f3ecfb);
+}
+
+.decoracion {
+    color: #9467c1;
+    font-size: 15px;
+    letter-spacing: 5px;
 }
 
 .bienvenida h2 {
-    font-size: 32px;
-    color: #8656a8;
-    margin: 20px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 58px);
+    color: #352544;
+    margin: 18px 0 5px;
 }
 
 .bienvenida h3 {
-    font-size: 25px;
+    color: #9464c3;
+    font-size: 27px;
     margin-bottom: 15px;
 }
 
 .bienvenida p {
-    max-width: 550px;
-    margin: 0 auto 25px;
-    line-height: 1.7;
+    max-width: 580px;
+    color: #70667c;
+    margin-bottom: 28px;
 }
 
-.decoracion {
-    font-size: 28px;
-}
-
-/* BOTÓN */
 .boton {
     display: inline-block;
-    background: #a879ce;
+    padding: 13px 27px;
+    background: #7950a5;
     color: white;
     text-decoration: none;
-    padding: 13px 25px;
-    border-radius: 25px;
+    border-radius: 7px;
+    font-weight: 600;
     transition: 0.3s;
 }
 
 .boton:hover {
-    background: #8855b0;
-    transform: scale(1.05);
+    background: #553477;
+    transform: translateY(-3px);
 }
 
-/* SECCIONES */
+/* ===== SECCIONES ===== */
 section {
-    padding: 55px 20px;
+    padding: 75px 10%;
     text-align: center;
 }
 
 section h2 {
-    color: #9867b9;
-    margin-bottom: 25px;
-    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #563878;
+    margin-bottom: 30px;
 }
 
-/* TARJETAS */
+/* ===== TARJETAS ===== */
 .tarjeta {
     background: white;
-    padding: 25px;
-    border-radius: 20px;
-    max-width: 750px;
-    margin: 15px auto;
-    box-shadow: 0 5px 18px #d9c6e5;
-    line-height: 1.8;
+    padding: 32px;
+    border: 1px solid #eee7f4;
+    border-radius: 15px;
+    max-width: 850px;
+    margin: 20px auto;
+    box-shadow: 0 8px 30px rgba(69, 45, 94, 0.06);
+    line-height: 1.9;
     transition: 0.3s;
 }
 
 .tarjeta:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(69, 45, 94, 0.12);
 }
 
-/* CONTENEDORES */
+.tarjeta h3 {
+    color: #8255ad;
+    margin-bottom: 12px;
+}
+
+/* ===== CONTENEDORES ===== */
 .contenedor {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .contenedor .tarjeta {
-    flex: 1 1 250px;
+    width: 100%;
+    margin: 0;
 }
 
-/* PIE DE PÁGINA */
+/* ===== GALERÍA ===== */
+#galeria {
+    background: #f4eff9;
+}
+
+/* ===== PIE DE PÁGINA ===== */
 footer {
-    background: #b48bd0;
-    color: white;
+    background: #292137;
+    color: #eee5f8;
     text-align: center;
-    padding: 25px;
-    line-height: 1.8;
+    padding: 35px 15px;
+    line-height: 2;
+    font-size: 14px;
 }
 
-/* ADAPTACIÓN A CELULARES */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 30px;
+/* ===== ADAPTACIÓN A CELULARES ===== */
+@media (max-width: 700px) {
+    header {
+        justify-content: center;
+        text-align: center;
+        padding: 22px 5%;
     }
 
     nav {
-        gap: 8px;
+        justify-content: center;
+        gap: 14px;
     }
 
-    nav a {
-        font-size: 13px;
+    .bienvenida {
+        padding: 75px 7%;
+        min-height: 400px;
     }
 
-    .bienvenida h2 {
-        font-size: 25px;
+    section {
+        padding: 55px 7%;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+    .tarjeta {
+        padding: 22px;
     }
 }
+
